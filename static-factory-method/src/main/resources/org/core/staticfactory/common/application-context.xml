@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="createdDate" class="java.util.Calendar" factory-method="getInstance"/>
+    <bean id="appointment" class="org.core.staticfactory.main.Appointment">
+        <property name="appointmentNo" value="1"/>
+        <property name="subject" value="dailyboaringmeeting"/>
+        <property name="createdDate" ref="createdDate"/>
+        <property name="status" value="not started yet"/>
+    </bean>
+</beans>
